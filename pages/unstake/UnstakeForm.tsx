@@ -147,7 +147,7 @@ export const UnstakeForm = () => {
           cursor="default"
         >
           <Text>info</Text>
-          <Tooltip label="Current liquid-unstaking fee. It varies according to the available liquidity supporting the liquid-unstake operation and the amount of mpETH you want to unstake.">
+          <Tooltip label="In order to skip the waiting period a fee is charged for Liquid Unstaking. The fee varies based on the amount of liquidity available and the amount you want to unstake.">
             <InfoIcon />
           </Tooltip>
         </Flex>

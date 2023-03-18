@@ -197,11 +197,7 @@ export const StakeForm = () => {
         >
           <Text>info</Text>
           <Tooltip
-            label={`When you stake you get mpETH tokens. While you hold mpETH tokens, 
-                  you get staking rewards at every second. You can unstake at any time.
-                  Min amount to stake: ${wtoeCommify(
-                    BigNumber.from("1000000000000000000")
-                  )} ETH.`}
+            label={`When you stake wNEAR you get stNEAR tokens. stNEAR increases in value every 12hs as staking rewards are collected at the end of every epoch. You can unstake at any time and recover your wNEAR.`}
           >
             <InfoIcon />
           </Tooltip>
