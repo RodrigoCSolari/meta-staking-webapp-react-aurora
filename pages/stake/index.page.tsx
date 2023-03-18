@@ -65,7 +65,7 @@ const Stake = () => {
                 <Apr
                   data={toStringDec2(metrics.st_near_30_day_apy)}
                   boxSize="120px"
-                  tooltip="APR is based on the 30 day average price of mpETH. The reward is calculated by summing up the consensus layer rewards and the transaction fees over the last 30 days, annualizing this result and dividing it by the staked balance across all Meta Pool validators."
+                  tooltip="APR is based on the 30 day average price of stNEAR."
                 />
               )}
             </SkeletonCircle>
