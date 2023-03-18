@@ -1,0 +1,116 @@
+.number-section {
+  text-align: center;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+}
+
+.display {
+  display: block;
+  font-weight: 900;
+  width: 28px;
+  position: relative;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow:0 0 5px #8888;
+}
+
+.display__top,
+.display__bottom {
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+.display__top {
+  line-height: 1.5;
+  color: #fff;
+  background-color: #8542EB;
+  border-radius: 5px 5px 0 0;
+}
+
+.display__bottom {
+  line-height: 0;
+  color: #fff;
+  background-color: #7532DB;
+  border-radius: 0 0 5px 5px;
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  perspective: 400px;
+  height: 100%;
+  width: 28px;
+}
+
+.overlay__top,
+.overlay__bottom {
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  height: 50%;
+}
+
+.overlay__top {
+  top: 0;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #8542EB;
+  transform-origin: bottom;
+  border-radius: 5px 5px 0 0;
+}
+
+.overlay__bottom {
+  bottom: 0;
+  line-height: 0;
+  color: #fff;
+  background-color: #7532DB;
+  transform-origin: top;
+  border-radius: 0 0 5px 5px;
+}
+
+.overlay.flip .overlay__top {
+  animation: flip-top 0.8s linear;
+}
+
+.overlay.flip .overlay__bottom {
+  animation: flip-bottom 0.8s linear;
+}
+
+@keyframes flip-top {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50%,
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes flip-bottom {
+  0%,
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .number-section{
+    font-size: 21px;
+  } 
+    .display ,
+    .overlay {
+      width: 21px;
+    }
+  
+}
