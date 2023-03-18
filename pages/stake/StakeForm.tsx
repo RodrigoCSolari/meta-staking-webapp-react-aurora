@@ -10,12 +10,9 @@ import {
   Tooltip,
   Box,
   Skeleton,
-  Link,
-  Img,
 } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons";
-//import { depositETHStaking } from "../../lib/metapool";
-import { ntoy, wtoe, wtoeCommify, yton } from "../../lib/util";
+import { ntoy, wtoeCommify, yton } from "../../lib/util";
 import { useTxSuccessStore } from "../../stores/txSuccessStore";
 import { useErrorMsgStore } from "../../stores/ErrorMsgStore";
 import { getErrorMessage } from "../../utils/getErrorMessage";
@@ -25,7 +22,6 @@ import { InfoContainer } from "../../components/InfoContainer";
 import { useQueryClient } from "react-query";
 import { checkTxErrorAmounts } from "../../services/transaction/checkTxErrorAmounts.service";
 import { useAccount, useSigner } from "wagmi";
-import { useGetEthereumBalance } from "../../hooks/useGetEthereumBalance";
 import { DetailsLink } from "../../components/DetailsLink";
 import { useGetUserData } from "../../hooks/useGetUserData";
 import { BigNumber } from "ethers";

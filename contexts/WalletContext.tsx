@@ -16,7 +16,7 @@ const config = getConfig();
 const { chains, provider } = configureChains(
   [config.wagmiNetwork as unknown as Chain],
   [
-    alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_ID || "" }),
+    //alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_ID || "" }),
     publicProvider(),
   ]
 );
