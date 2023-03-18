@@ -105,7 +105,7 @@ export const UnstakeForm = () => {
             fontSize="1.5em"
             fontWeight="500"
           >
-            <Img w="1.5em" h="1.5em" src="./mpETH_white.png" />
+            Ⓢ
           </InputLeftElement>
           <Input
             placeholder="stNear amount to unstake"

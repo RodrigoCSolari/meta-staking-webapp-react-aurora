@@ -1,1 +1,1 @@
-# meta-staking-webapp-ssv
+# meta-staking-webapp-react-aurora
