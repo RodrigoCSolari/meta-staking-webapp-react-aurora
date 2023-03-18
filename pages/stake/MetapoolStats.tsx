@@ -49,7 +49,6 @@ export const MetapoolStats = () => {
       <Skeleton isLoaded={nearDollarPrice !== undefined}>
         <TokenInfo
           description="wNear Price"
-          tooltip="The amount of wNear in your wallet"
           amount={toStringDec2(nearDollarPrice || 0)}
           symbol="$"
         />
@@ -60,7 +59,6 @@ export const MetapoolStats = () => {
       >
         <TokenInfo
           description="stNear Price"
-          tooltip="The amount of stNear in your wallet"
           amount={yton(contractData?.stNearprice)}
           symbol="Ⓝ"
           dollarAmount={yoctoToDollarStr(
