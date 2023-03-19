@@ -45,11 +45,13 @@ export function checkMaxWithdrawalAvailable(
 ) {
   const inputAmountBN = parseUnits(inputAmount, 24);
   const withdrawalAvailableInStNear = withdrawalAvailable
-    .mul(stNearPrice)
-    .div(ntoy("1"));
+    .mul(ntoy("1"))
+    .div(stNearPrice);
   if (withdrawalAvailableInStNear.lt(inputAmountBN)) {
     throw Error(
-      `The Liquidity Available Is ${yton(withdrawalAvailable)} wNear`
+      `The Maximum Unstake At This Moment Is ${yton(
+        withdrawalAvailableInStNear
+      )} stNear`
     );
   }
 }

@@ -14,9 +14,9 @@ export const checkUnstakeErrorAmounts = (
   minDeposit: BigNumber
 ) => {
   try {
-    checkMinUnstakeAmount(inputAmount, accountAmount, minDeposit);
     checkMaxAccountAmount(accountAmount, inputAmount, "stNear Balance");
     checkMaxWithdrawalAvailable(withdrawalAvailable, inputAmount, stNearPrice);
+    checkMinUnstakeAmount(inputAmount, accountAmount, minDeposit);
   } catch (ex) {
     return getErrorMessage(ex);
   }
