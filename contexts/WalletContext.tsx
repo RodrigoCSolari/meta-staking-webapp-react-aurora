@@ -32,17 +32,11 @@ const wagmiClient = createClient({
   provider,
 });
 
-export const algo = createContext(
-  {} as { first: string; setFirst: Dispatch<SetStateAction<string>> }
-);
 export const WalletContext: React.FC = ({ children }) => {
-  const [first, setFirst] = useState("lalala");
   return (
-    <algo.Provider value={{ first, setFirst }}>
-      <WagmiConfig client={wagmiClient}>
-        <RainbowKitProvider chains={chains}>{children}</RainbowKitProvider>
-      </WagmiConfig>
-    </algo.Provider>
+    <WagmiConfig client={wagmiClient}>
+      <RainbowKitProvider chains={chains}>{children}</RainbowKitProvider>
+    </WagmiConfig>
   );
 };
 
